@@ -28,6 +28,8 @@ if enter_number >= 1 and enter_number <= 50:
       	number_counter ["41-50"] += 1
 
 #Use an else statement to print an error message when an input is invalid and break the loop.
-
+else:
+            print("Your input is outside the given range.") 
+         
 #Print the counts for each interval defined.
 print(number_counter)
