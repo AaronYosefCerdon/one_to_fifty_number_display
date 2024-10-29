@@ -7,9 +7,11 @@ number_counter = {
          "41-50": 0         
 }
 #Start a loop that will ask the user to input numbers.
-
+while True:
+         
 #Ask the user to input numbers from 1 to 50.
 enter_number = int(input("Please enter a number from 1 to 50: "))
+
 #Use an if statement to give a condition only numbers 1 to 50 are accepted.
 if enter_number >= 1 and enter_number <= 50:  
         	
