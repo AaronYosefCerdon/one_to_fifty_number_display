@@ -37,4 +37,9 @@ while True:
          	break
                                        
 #Print the counts for each interval defined.
-print("Number count for each range:" , number_counter)
+print("Number count for each range:")
+print("1-10:", number_counter["1-10"])
+print("11-20:", number_counter["11-20"])
+print("21-30:", number_counter["21-30"])
+print("31-40:", number_counter["31-40"])
+print("41-50:", number_counter["41-50"])
