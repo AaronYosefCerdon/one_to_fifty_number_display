@@ -5,16 +5,17 @@ number_counter = {
          "21-30": 0,
          "31-40": 0,
          "41-50": 0         
-}
+         }
 #Start a loop that will ask the user to input numbers.
 while True:
-         
+#Use a try command to print an error message.
+         try:         
 #Ask the user to input numbers from 1 to 50.
-         enter_number = int(input("Please enter a number from 1 to 50: "))
+          enter_number = int(input("Please enter a number from 1 to 50: "))
 
 #Use an if statement to give a condition only numbers 1 to 50 are accepted.
-         if 1 <= enter_number <= 50:
-            
+          if 1 <= enter_number <= 50:
+                                
 #Define each counter into 5 different ranges where each input will fall in.
             if enter_number <= 10 and enter_number >=1:
              	 number_counter ["1-10"] += 1
@@ -25,12 +26,15 @@ while True:
             elif enter_number <=40 and enter_number > 30:
               	number_counter ["31-40"] += 1
             elif enter_number <=50 and enter_number > 40:
-              	number_counter ["41-50"] += 1 
-#Use an else statement to print an error message when an input is outside the given range.           
-         else:
-            print("Your input is outside the given range.") 
-#Break the loop.
-            break  
-         
+              	number_counter ["41-50"] += 1
+          else:
+          	print("Your input is out of the specified range.")
+          	break
+
+#Use an except command to print an error message.
+         except ValueError:
+         	print("Your input is invalid. Please enter an integer.")
+         	break
+                                       
 #Print the counts for each interval defined.
-print(number_counter)
+print("Number count for each range:" , number_counter)
